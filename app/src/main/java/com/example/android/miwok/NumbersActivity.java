@@ -15,10 +15,8 @@
  */
 package com.example.android.miwok;
 
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import java.util.ArrayList;
