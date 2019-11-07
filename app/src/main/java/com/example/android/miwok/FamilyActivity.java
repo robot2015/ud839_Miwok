@@ -17,6 +17,7 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -29,7 +30,7 @@ public class FamilyActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         // Create a list of words
-        ArrayList<Word> words = new ArrayList<Word>();
+        ArrayList<Word> words = new ArrayList<>();
         words.add(new Word("father", "әpә", R.drawable.family_father));
         words.add(new Word("mother", "әṭa", R.drawable.family_mother));
         words.add(new Word("son", "angsi", R.drawable.family_son));

@@ -29,7 +29,7 @@ public class ColorsActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         // Create a list of words
-        ArrayList<Word> words = new ArrayList<Word>();
+        ArrayList<Word> words = new ArrayList<>();
         words.add(new Word("red", "weṭeṭṭi", R.drawable.color_red));
         words.add(new Word("green", "chokokki", R.drawable.color_green));
         words.add(new Word("brown", "ṭakaakki", R.drawable.color_brown));
