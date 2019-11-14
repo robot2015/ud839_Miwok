@@ -30,6 +30,7 @@ import java.util.ArrayList;
 
 public class FamilyActivity extends AppCompatActivity {
 
+    // Create MediaPlayer object.
     private MediaPlayer mediaPlayer;
 
     // Handles audio focus when playing a sound file.
