@@ -18,7 +18,7 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class NumbersFragment extends Fragment {
+public class PhrasesFragment extends Fragment {
 
     // Create MediaPlayer object.
     private MediaPlayer mediaPlayer;
@@ -51,7 +51,7 @@ public class NumbersFragment extends Fragment {
         }
     };
 
-    public NumbersFragment() {
+    public PhrasesFragment() {
         // Required empty public constructor
     }
 
@@ -67,19 +67,19 @@ public class NumbersFragment extends Fragment {
 
         // Create a list of words
         final ArrayList<Word> words = new ArrayList<>();
-        words.add(new Word("one", "lutti", R.raw.number_one, R.drawable.number_one));
-        words.add(new Word("two", "otiiko", R.raw.number_two, R.drawable.number_two));
-        words.add(new Word("three", "tolookosu", R.raw.number_three, R.drawable.number_three));
-        words.add(new Word("four", "oyyisa", R.raw.number_four, R.drawable.number_four));
-        words.add(new Word("five", "massokka", R.raw.number_five, R.drawable.number_five));
-        words.add(new Word("six", "temmokka", R.raw.number_six, R.drawable.number_six));
-        words.add(new Word("seven", "kenekaku", R.raw.number_seven, R.drawable.number_seven));
-        words.add(new Word("eight", "kawinta", R.raw.number_eight, R.drawable.number_eight));
-        words.add(new Word("nine", "wo’e", R.raw.number_nine, R.drawable.number_nine));
-        words.add(new Word("ten", "na’aacha", R.raw.number_ten, R.drawable.number_ten));
+        words.add(new Word("Where are you going?", "minto wuksus", R.raw.phrase_where_are_you_going));
+        words.add(new Word("What is your name?", "tinnә oyaase'nә", R.raw.phrase_what_is_your_name));
+        words.add(new Word("My name is...", "oyaaset...", R.raw.phrase_my_name_is));
+        words.add(new Word("How are you feeling?", "michәksәs?", R.raw.phrase_how_are_you_feeling));
+        words.add(new Word("I’m feeling good.", "kuchi achit", R.raw.phrase_im_feeling_good));
+        words.add(new Word("Are you coming?", "әәnәs'aa?", R.raw.phrase_are_you_coming));
+        words.add(new Word("Yes, I’m coming.", "hәә’ әәnәm", R.raw.phrase_yes_im_coming));
+        words.add(new Word("I’m coming.", "әәnәm", R.raw.phrase_im_coming));
+        words.add(new Word("Let’s go.", "yoowutis", R.raw.phrase_lets_go));
+        words.add(new Word("Come here.", "әnni'nem", R.raw.phrase_come_here));
 
         // Create WordAdapter.
-        final WordAdapter adapter = new WordAdapter(getActivity(), words, R.color.category_numbers);
+        final WordAdapter adapter = new WordAdapter(getActivity(), words, R.color.category_phrases);
 
         // Create ListView.
         ListView listView = (ListView) rootView.findViewById(R.id.list);
@@ -93,7 +93,7 @@ public class NumbersFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 // Get the {@link Word} object at the given position the user clicked on.
-                Log.v("NumbersFragment", "Current word: " + words.get(i));
+                Log.v("ColorsFragment", "Current word: " + words.get(i));
 
                 // Ensure MediaPlayer is clear before starting.
                 releaseMediaPlayer();

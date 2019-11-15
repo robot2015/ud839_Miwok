@@ -18,7 +18,7 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class NumbersFragment extends Fragment {
+public class ColorsFragment extends Fragment {
 
     // Create MediaPlayer object.
     private MediaPlayer mediaPlayer;
@@ -51,7 +51,7 @@ public class NumbersFragment extends Fragment {
         }
     };
 
-    public NumbersFragment() {
+    public ColorsFragment() {
         // Required empty public constructor
     }
 
@@ -67,19 +67,17 @@ public class NumbersFragment extends Fragment {
 
         // Create a list of words
         final ArrayList<Word> words = new ArrayList<>();
-        words.add(new Word("one", "lutti", R.raw.number_one, R.drawable.number_one));
-        words.add(new Word("two", "otiiko", R.raw.number_two, R.drawable.number_two));
-        words.add(new Word("three", "tolookosu", R.raw.number_three, R.drawable.number_three));
-        words.add(new Word("four", "oyyisa", R.raw.number_four, R.drawable.number_four));
-        words.add(new Word("five", "massokka", R.raw.number_five, R.drawable.number_five));
-        words.add(new Word("six", "temmokka", R.raw.number_six, R.drawable.number_six));
-        words.add(new Word("seven", "kenekaku", R.raw.number_seven, R.drawable.number_seven));
-        words.add(new Word("eight", "kawinta", R.raw.number_eight, R.drawable.number_eight));
-        words.add(new Word("nine", "wo’e", R.raw.number_nine, R.drawable.number_nine));
-        words.add(new Word("ten", "na’aacha", R.raw.number_ten, R.drawable.number_ten));
+        words.add(new Word("red", "weṭeṭṭi", R.raw.color_red, R.drawable.color_red));
+        words.add(new Word("green", "chokokki", R.raw.color_green, R.drawable.color_green));
+        words.add(new Word("brown", "ṭakaakki", R.raw.color_brown, R.drawable.color_brown));
+        words.add(new Word("gray", "ṭopoppi", R.raw.color_gray, R.drawable.color_gray));
+        words.add(new Word("black", "kululli", R.raw.color_black, R.drawable.color_black));
+        words.add(new Word("white", "kelelli", R.raw.color_white, R.drawable.color_white));
+        words.add(new Word("dusty yellow", "ṭopiisә", R.raw.color_dusty_yellow, R.drawable.color_dusty_yellow));
+        words.add(new Word("mustard yellow", "chiwiiṭә", R.raw.color_mustard_yellow, R.drawable.color_mustard_yellow));
 
         // Create WordAdapter.
-        final WordAdapter adapter = new WordAdapter(getActivity(), words, R.color.category_numbers);
+        final WordAdapter adapter = new WordAdapter(getActivity(), words, R.color.category_colors);
 
         // Create ListView.
         ListView listView = (ListView) rootView.findViewById(R.id.list);
@@ -93,7 +91,7 @@ public class NumbersFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 // Get the {@link Word} object at the given position the user clicked on.
-                Log.v("NumbersFragment", "Current word: " + words.get(i));
+                Log.v("ColorsFragment", "Current word: " + words.get(i));
 
                 // Ensure MediaPlayer is clear before starting.
                 releaseMediaPlayer();
