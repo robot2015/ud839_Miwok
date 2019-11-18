@@ -16,11 +16,9 @@
 package com.example.android.miwok;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-
-import com.example.android.miwok.NumbersFragment;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 /**
  * Provides the appropriate {@link Fragment} for a view pager.
@@ -54,5 +52,11 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return PAGE_COUNT;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        // Generate title based on item position
+        return tabTitles[position];
     }
 }
